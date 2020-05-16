@@ -1,17 +1,18 @@
 {
-  "name": "react-favicon",
+  "name": "react-fav-icons",
   "version": "1.0.0",
   "private": false,
   "main": "dist/Components/FavIcon/index.js",
   "module": "dist/Components/FavIcon/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/warish56/react-favicon"
+    "url": "https://github.com/warish56/react-fav-icons"
   },
   "babel": {
     "presets": [
       "@babel/react"
-    ]
+    ],
+    "plugins": ["@babel/plugin-proposal-class-properties"]
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -27,7 +28,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publish:npm": "NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/Components --out-dir dist/Components --copy-files"
-
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4"
+    "@babel/cli": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3"
   }
 }
